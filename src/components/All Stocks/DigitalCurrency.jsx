@@ -11,7 +11,7 @@ export default function DigitalCurrency() {
 
     let stockVal = await response.data;
     setStock(stockVal);
-    
+    console.log(stockVal);
   }
   useEffect(() => {
     fetchStock()

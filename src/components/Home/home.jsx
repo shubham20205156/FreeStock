@@ -12,13 +12,13 @@ const Home = () => {
             <div class="homeContainer">
                 <div class="homeLeftContainer " >
                     <div class="d-flex ">
-                        <form class="d-flex" onSubmit={handleSearch} style={{ position: 'absolute', marginTop: '122px', marginLeft: '122px', width: '30rem' }}>
+                        <form class="searchContainer" onSubmit={handleSearch}>
                             <input class="form-control mr-sm-2" type="search" id="search" value={searchValue}
                         onChange={(e) => setSearchValue(e.target.value)} placeholder="Search about Stocks / mutual funds / bitcoins" aria-label="Search" />
                             <button class="btn btn-success my-2 my-sm-0 mx-3" type="submit" >Search</button>
                         </form>
                     </div>
-                    <h1 class="HomePara">Learn How to Invest in stock</h1>
+                    <h1 class="HomePara">Learn How to Invest</h1>
                     <h1 class="HomePara2"> Without Risk</h1>
                     <p class="HomePara3">FreeStock is a free and simple plateform where you can learn how to invest in</p>
                     <p class="HomePara4">stock market without risking your money</p>

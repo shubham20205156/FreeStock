@@ -21,11 +21,11 @@ const BoughtCoin = () => {
     return (
         <div className="container my-3">
             <div className="row">
-                {data.map((element) => {
-                    return <div className="col-md-4">
+                {data.map((element) => (
+                    <div className="col-md-4">
                         <BoughtCoinBox name={element.name} image={element.Image} id={element.id} market_cap={element.marketCap} DailyChange={element.DailyChange} current_price={element.price} quantity={element.quantity} />
                     </div>
-                })}               
+                ))}               
             </div>
             <div className="boughtStocks"></div>
         </div>

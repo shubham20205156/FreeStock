@@ -100,8 +100,15 @@
  max-width: 75%;
  margin-top: 34px;
 }
+.searchContainer{
+  position: absolute; 
+  margin-top: 122px; 
+  margin-left: 122px; 
+  width:30rem;
+  display: flex;
+}
 .ProfileCoinBox{
-  border: 1.4px solid rgb(178, 159, 159);
+  border: 1.4px solid rgb(17white8, 159, 159);
   border-radius: 7px;
   width: 20rem;
   padding: 8px;
@@ -113,9 +120,10 @@
   border-radius: 7px;
   width: 20rem;
   padding: 8px;
-  color: rgb(64, 171, 142);
   font-weight: 500;
   margin-top: 23px;
+  background: linear-gradient(to right, #000cff, #c300ff);
+  color: white;
 }
 .profileContainer{
   position: absolute;
@@ -129,7 +137,7 @@ a {
   text-decoration: none;
 }
 .verticleLine{
-  border-left: 1.4px solid rgb(178, 159, 159);
+  border-left: 1px solid rgb(178, 159, 159);
   height: 75%;
   position: absolute;
   margin-left: 745px;
@@ -140,9 +148,14 @@ a {
   margin-left: 812px;
   border-radius: 7px;
   width:330px;
-  height: 220px;
+  height: 155px;
   padding: 15px;
   font-weight: 500;
+  background: linear-gradient(to right, #000cff, #c300ff);
+  color: white;
+}
+.balanceContainer{
+  display: flex;
 }
 
 

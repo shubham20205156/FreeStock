@@ -1,6 +1,7 @@
-import React from 'react'
+import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
 const Profile = () => {
+  const [balance, setBalance] = useState(100000);
   const name = localStorage.getItem('name');
   return (
     <div>
@@ -37,10 +38,19 @@ const Profile = () => {
             </div>
           </div>
           <div className="verticleLine"></div>
-          <div className="totalInvestment" style={{ background: 'linear-gradient(to right, #000cff, #c300ff)', color: 'white' }}>
-            <p>Available Balance :</p>
-            <p>Total Invested Amount :</p>
-            <p>Total Returns : </p>
+          <div className="totalInvestment" >
+            <div className="balanceContainer">
+              <p>Available Balance :</p>
+              <p>{balance}$</p>
+            </div>
+            <div className="balanceContainer">
+              <p>Total Invested Amount :</p>
+              <p>{balance}$</p>
+            </div>
+            <div className="balanceContainer">
+              <p>Total Returns : </p>
+              <p>{balance}$</p>
+            </div>
           </div>
         </div>
       </div>
