@@ -30,7 +30,7 @@ export default function IndianStocks() {
       {stockData && <pre>{JSON.stringify(stockData, null, 2)}</pre>}
       <div className="container">
         <div className="row">
-          
+
         </div>
       </div>
     </div>
