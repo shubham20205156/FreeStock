@@ -9,24 +9,24 @@ const boxImage = {
 
 }
 const ButtonStyle = {
-    height:'30px',
-    marginLeft:'22px'
+    height: '30px',
+    marginLeft: '22px'
 }
-export default function BoughtCoinsBox({name,image,current_price,market_cap,DailyChange,quantity}) {
-    const formattedCurrentPrice = (current_price / 80).toFixed(2); 
-    const formattedMarketCap = (market_cap/ 80).toFixed(2); 
-    const formattedDailyChange = (DailyChange/ 80).toFixed(2); 
-    const obj= {
-        name :name,
-        image:image,
-        price:formattedCurrentPrice,
-        marketCap:formattedMarketCap,
-        DailyChange:DailyChange,
-        quantity:quantity    
-      };
-      const navigate = useNavigate();
-    const HandleBuy=async(e)=>{
-        e.preventDefault();    
+export default function BoughtCoinsBox({ name, image, current_price, market_cap, DailyChange, quantity }) {
+    const formattedCurrentPrice = (current_price / 80).toFixed(2);
+    const formattedMarketCap = (market_cap / 80).toFixed(2);
+    const formattedDailyChange = (DailyChange / 80).toFixed(2);
+    const obj = {
+        name: name,
+        image: image,
+        price: formattedCurrentPrice,
+        marketCap: formattedMarketCap,
+        DailyChange: DailyChange,
+        quantity: quantity
+    };
+    const navigate = useNavigate();
+    const HandleBuy = async (e) => {
+        e.preventDefault();
         navigate(`/BuyCoin?query=${JSON.stringify(obj)}`);
     }
     return (
@@ -34,7 +34,7 @@ export default function BoughtCoinsBox({name,image,current_price,market_cap,Dail
             <div className="card my-3" style={{ width: "18rem" }}>
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
-                    
+
                     <img style={boxImage} src={image} alt="" />
                     <p className="card-text"> current price : {formattedCurrentPrice}$</p>
                     <p className="card-text">Market Cap : {formattedMarketCap}$</p>

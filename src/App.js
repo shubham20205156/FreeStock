@@ -19,6 +19,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import BalanceState from './components/Contexts/BalanceState';
 function App() {
 
   const [alert, setAlert] = useState(null);
@@ -33,41 +34,43 @@ function App() {
     }, 1500);
   }
   return (
-   <>
-   <Router>
-      <Header/>
-      <Alert alert={alert} />
-      <Routes>
-        <Route exact path="/" element={<Home showAlert={showAlert}/>}>      
-        </Route>   
-        <Route exact path="/About" element={<About/>}>      
-        </Route>        
-        <Route exact path="/Contact" element={<Contact/>}>      
-        </Route>  
-        <Route exact path="/Services" element={<Services/>}>      
-        </Route>
-        <Route exact path="/IndianStocks" element={<IndianStocks/>}>      
-        </Route>
-        <Route exact path="/DigitalCurrency" element={<DigitalCurrency/>}>      
-        </Route>
-        <Route exact path="/Login" element={<Login showAlert={showAlert}/>}>      
-        </Route>
-        <Route exact path="/SignUp" element={<SignUp showAlert={showAlert}/>}>      
-        </Route>
-        <Route exact path="/Search" element={<Search/>}>      
-        </Route>
-        <Route exact path="/BuyCoin" element={<BuyCoin showAlert={showAlert} />}>      
-        </Route>
-        <Route exact path="/Profile" element={<Profile />}>      
-        </Route>
-        <Route exact path="/BoughtCoin" element={<BoughtCoin/>}>      
-        </Route>
-      </Routes>
-    </Router>
-    <footer className='wrapper'>
-      <h5>All rights is reserved by FreeStock 2023</h5>
-    </footer>
-   </>
+    <>
+      <BalanceState>
+        <Router>
+          <Header />
+          <Alert alert={alert} />
+          <Routes>
+            <Route exact path="/" element={<Home showAlert={showAlert} />}>
+            </Route>
+            <Route exact path="/About" element={<About />}>
+            </Route>
+            <Route exact path="/Contact" element={<Contact />}>
+            </Route>
+            <Route exact path="/Services" element={<Services />}>
+            </Route>
+            <Route exact path="/IndianStocks" element={<IndianStocks />}>
+            </Route>
+            <Route exact path="/DigitalCurrency" element={<DigitalCurrency />}>
+            </Route>
+            <Route exact path="/Login" element={<Login showAlert={showAlert} />}>
+            </Route>
+            <Route exact path="/SignUp" element={<SignUp showAlert={showAlert} />}>
+            </Route>
+            <Route exact path="/Search" element={<Search />}>
+            </Route>
+            <Route exact path="/BuyCoin" element={<BuyCoin showAlert={showAlert} />}>
+            </Route>
+            <Route exact path="/Profile" element={<Profile />}>
+            </Route>
+            <Route exact path="/BoughtCoin" element={<BoughtCoin />}>
+            </Route>
+          </Routes>
+        </Router>
+        <footer className='wrapper'>
+          <h5>All rights is reserved by FreeStock 2023</h5>
+        </footer>
+      </BalanceState>
+    </>
   );
 }
 

@@ -1,7 +1,16 @@
-import React from 'react'
+import { React, useContext, useEffect } from 'react'
+import balanceContext from './Contexts/balanceContext'
+const About = () => {
+  const a = useContext(balanceContext);
+  useEffect(() => {
+    a.updateBalance(666);
+  }, [])
 
-export default function About() {
   return (
-    <div> This is About page</div>
+    <div>
+      hi guys {a.name} here
+    </div>
   )
 }
+
+export default About

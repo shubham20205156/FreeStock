@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import balanceContext from "../Contexts/balanceContext";
 
 const SignUp = (props) => {
 
   const [credentials, setCredentials] = useState({ name: "", email: "", password: "", cpassword: "" })
   let navigate = useNavigate();
-
+  const val = useContext(balanceContext);
+  const name = val.name;
   const handleSubmit = async (e) => {   
     e.preventDefault();
     const { name, email, password } = credentials;
@@ -33,6 +35,7 @@ const SignUp = (props) => {
 
   const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
+    val.updateName(credentials.name);
   }
   return (
     <div className='SignUpContainer'>

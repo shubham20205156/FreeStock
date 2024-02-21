@@ -1,12 +1,11 @@
 import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
 const Profile = () => {
-  const [balance, setBalance] = useState(100000);
-  const name = localStorage.getItem('name');
+  
   return (
     <div>
       <div className="mainContainerProfile" style={{ background: 'white', height: '87vh' }}>
-        <h2 style={{ display: 'flex', justifyContent: 'center' }}>Here are Your Investments Mr. {name}</h2>
+        <h2 style={{ display: 'flex', justifyContent: 'center' }}>Here are Your Investments Mr. name</h2>
         <div className="main" style={{ marginTop: '23px' }}>
           <div className="profileContainer">
             <Link to="/BoughtCoin"><div className="ProfileCoinBox" style={{ background: 'linear-gradient(to right, #000cff, #c300ff)', color: 'white' }}>
@@ -41,15 +40,15 @@ const Profile = () => {
           <div className="totalInvestment" >
             <div className="balanceContainer">
               <p>Available Balance :</p>
-              <p>{balance}$</p>
+              <p>100$</p>
             </div>
             <div className="balanceContainer">
               <p>Total Invested Amount :</p>
-              <p>{balance}$</p>
+              <p>100$</p>
             </div>
             <div className="balanceContainer">
               <p>Total Returns : </p>
-              <p>{balance}$</p>
+              <p>100$</p>
             </div>
           </div>
         </div>

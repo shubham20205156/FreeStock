@@ -1,11 +1,12 @@
 
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import balanceContext from '../Contexts/balanceContext'
 
 const Login = (props) => {
 
   const [credentials, setCredentials] = useState({ email: "", password: "" })
-
+  const val = useContext(balanceContext);
   let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -21,7 +22,8 @@ const Login = (props) => {
     
     if (json.success) {
       // save the authtoken and redirect
-      localStorage.setItem('token', json.authtoken);        
+      localStorage.setItem('token', json.authtoken);   
+      val.updateName(json.name);   
       navigate("/")
       props.showAlert("Login successfully", "success")
     } else {
