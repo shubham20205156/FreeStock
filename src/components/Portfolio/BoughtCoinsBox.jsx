@@ -13,9 +13,9 @@ const ButtonStyle = {
     marginLeft: '22px'
 }
 export default function BoughtCoinsBox({ name, image, current_price, market_cap, DailyChange, quantity }) {
-    const formattedCurrentPrice = (current_price / 80).toFixed(2);
-    const formattedMarketCap = (market_cap / 80).toFixed(2);
-    const formattedDailyChange = (DailyChange / 80).toFixed(2);
+    const formattedCurrentPrice = (current_price);
+    const formattedMarketCap = (market_cap);
+    const formattedDailyChange = (DailyChange);
     const obj = {
         name: name,
         image: image,
