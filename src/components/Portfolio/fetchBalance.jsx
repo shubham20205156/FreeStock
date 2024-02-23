@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react'
+import { useEffect } from 'react'
 
 const fetchBalance = () => {
     useEffect(async () => {
@@ -8,13 +8,10 @@ const fetchBalance = () => {
            headers:{
             "Content-Type":"application/json"
            },
-           body:('id')
+           body:('email')
         })
     }, [])
 
-    return (
-        <div>fetchBalance</div>
-    )
 }
 
 export default fetchBalance

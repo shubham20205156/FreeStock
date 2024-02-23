@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const {Schema} = mongoose
+const { Schema } = mongoose
 const userBalance = new Schema({
 
     email:{
-        type:email,
-        required:true
+        type:String,
+        require:true
     },
     balance:{
         type:Number,
@@ -13,4 +13,4 @@ const userBalance = new Schema({
 })
 
 const UserBalance = mongoose.model('userBalance',userBalance);
-export default UserBalance;
+module.exports =  UserBalance;

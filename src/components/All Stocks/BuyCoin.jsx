@@ -43,6 +43,7 @@ const BuyCoin = (props) => {
                 console.log(json);
                 navigate("/DigitalCurrency ")
                 props.showAlert(`${obj.name} bought successfully`, "success");
+                
             }
         }
 

@@ -9,22 +9,21 @@ const boxImage = {
 
 }
 const ButtonStyle = {
-    height:'30px',
-    marginLeft:'22px'
+    height: '30px',
+    marginLeft: '22px'
 }
-export default function CoinBox({name,image,current_price,market_cap,DailyChange}) {
+export default function CoinBox({ name, image, current_price, market_cap, DailyChange }) {
 
-    const obj= {
-        name :name,
-        image:image,
-        price:((current_price)/80).toFixed(2),
-        marketCap:((market_cap)/80).toFixed(2),
-        DailyChange:DailyChange=DailyChange      
-      };
-      const navigate = useNavigate();
-    const HandleBuy=async(e)=>{
+    const obj = {
+        name: name,
+        image: image,
+        price: ((current_price) / 80).toFixed(2),
+        marketCap: ((market_cap) / 80).toFixed(2),
+        DailyChange: DailyChange = DailyChange
+    };
+    const navigate = useNavigate();
+    const HandleBuy = async (e) => {
         e.preventDefault();
-       
         navigate(`/BuyCoin?query=${JSON.stringify(obj)}`);
     }
 
@@ -34,7 +33,7 @@ export default function CoinBox({name,image,current_price,market_cap,DailyChange
             <div class="card my-3" style={{ width: "18rem" }}>
                 <div class="card-body">
                     <h5 class="card-title">{name}</h5>
-                    
+
                     <img style={boxImage} src={image} alt="" />
                     <p class="card-text"> current price : {obj.price}$</p>
                     <p class="card-text">Market Cap : {obj.marketCap}$</p>
