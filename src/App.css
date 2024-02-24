@@ -95,6 +95,10 @@
   font-weight: 774;
   color: white;
   text-decoration: none;
+  
+}
+.headerText:hover {
+ color: rgb(214, 202, 202);
 }
 .loginSignupButtonContainer{
   display: flex; 

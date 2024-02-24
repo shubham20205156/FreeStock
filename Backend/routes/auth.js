@@ -11,7 +11,7 @@ const  UserBalance = require('../models/UserBalance');
 router.post('/createuser', [
     body('email', 'Enter a valid email').isEmail(),
     body('name', 'Enter a valid name').isLength({ min: 3 }),
-    body('password', 'Enter password of minimum 8 characters').isLength({ min: 8 }),
+    body('password', 'Enter password of minimum 8 characters').isLength({ min: 2 }),
 
 ], async (req, res) => {
     let success = false;

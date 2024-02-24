@@ -36,14 +36,14 @@ const BuyCoin = (props) => {
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify({ "name": name, "price": price, "marketCap": marketCap, "DailyChange": DailyChange, "Image": image, "quantity": quantity,"user":user })
+                    body: JSON.stringify({ "name": obj.name, "price": obj.price, "marketCap": obj.marketCap, "DailyChange": obj.DailyChange, "Image": obj.image, "quantity": inputValue, "user": user })
                 });
 
                 const json = await response.json();
                 console.log(json);
                 navigate("/DigitalCurrency ")
                 props.showAlert(`${obj.name} bought successfully`, "success");
-                
+
             }
         }
 
